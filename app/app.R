@@ -10,12 +10,12 @@ ui <- fluidPage(
   div(
     fluidRow(
       column(10,
-             align="center",
+             align="left",
              span("A common loot box scheme in games involves obtaining a collection of collectibles to earn the final reward. To acquire these collectibles, players must open cases that drop one collectible at a time, with the possibility of receiving duplicates. An exchange system is often available, allowing players to trade duplicate collectibles for new ones at a specified rate. The question then arises: what is the probability of obtaining the final reward after opening a certain number of boxes?")
       ),
       column(2,
              align="center",
-             HTML("<span>Created by <a href='https://zehuiyin.github.io/' target='_blank'>Zehui Yin</a></span>")
+             HTML("<span>Created by <br><a href='https://zehuiyin.github.io/' target='_blank'>Zehui Yin</a></span>")
       ),
       style = 'border-bottom: 1px solid'
     ),
@@ -65,7 +65,7 @@ ui <- fluidPage(
     fluidRow(
       column(12,
              align="center",
-             textOutput("prob")
+             htmlOutput("prob")
       )
     ), style = "max-width: 1200px; margin: auto;")
 )
@@ -90,8 +90,8 @@ server <- function(input, output, session) {
     
     res <- sum(sims)/length(sims)*100
     
-    paste0("Based on a simulation of 1,000 runs, the probability of obtaining the final reward is ", 
-           res, "%")
+    paste0("<span style='font-size:1.2em'>Based on a simulation of 1,000 runs, the probability of obtaining the final reward is <b>", 
+           res, "%</b>.</span>")
   })
 }
 
