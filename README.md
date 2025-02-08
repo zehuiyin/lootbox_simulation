@@ -6,4 +6,4 @@ A common loot box scheme in games involves collecting a series of collectibles t
 
 The app simulates 1,000 runs to determine the probability of successfully collecting the final reward when opening loot boxes in games.
 
-To access the web app, please click on this [link](zehuiyin.github.io/lootbox_simulation/).
+To access the web app, please click on this [link](https://zehuiyin.github.io/lootbox_simulation/).
