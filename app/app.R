@@ -1,11 +1,10 @@
 library(shiny)
 library(bslib)
-library(ggplot2)
 
 ui <- fluidPage(
   theme = bslib::bs_theme(bootswatch = "lumen"),
   titlePanel(
-    h1("Loot Box Opening Simulation", align = "center", id = "title")
+    h1("Loot Box Opening Simulation", align = "center")
   ),
   div(
     fluidRow(
